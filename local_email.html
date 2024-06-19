@@ -28,6 +28,87 @@
       height: 100%;
       min-height: 260px;
     }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    label {
+      text-align: left;
+      font-weight: bold;
+    }
+
+    #api {
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .heading {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #localAccountForm {
+      margin-top: 20px;
+    }
+
+    .entry-item {
+      margin-bottom: 10px;
+    }
+
+    .entry-item label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .entry-item input[type="email"], .entry-item input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      text-align: center;
+      margin-top: 20px;
+      background-color: #582d82;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover,
+    button.hover,
+    button:focus,
+    button.focus {
+      background-color: #582D82 !important;
+      border-color: #582D82 !important;
+      color: #FFFFFF !important;
+      box-shadow: 0 0 14px 0 #894fc2 !important;
+    }
+
+    input {
+      margin-bottom: 10px;
+      border-color: rgb(88, 45, 130) !important;
+    }
+
+    input:focus{
+      box-shadow: rgb(88, 45, 130) 0px 0px 0px 0.1rem !important;
+      border-color: rgb(88, 45, 130) !important;
+      color: var(--bs-body-color);
+      background-color: var(--bs-body-bg);
+      outline: 0;
+    }
+    .error {
+      color: #red;
+      font-size: 12px;
+      margin-top: 5px;
+    }
   </style>
 </head>
 
@@ -42,7 +123,54 @@
             </div>
           </h5>
           <p class="card-text">
-            <div id="api" role="main">
+            <div id="api" role="main"></div>
+
+              <div id="api" data-name="Unified" role="main">
+                    <div class="heading">
+                      <h1 role="heading">Sign in</h1>
+                    </div>
+                    <form id="localAccountForm" class="localAccount" aria-label="Sign in with your email address">
+                      <div class="intro">
+                        <h2>
+                          Sign in with your email address
+                        </h2>
+                      </div>
+                      <div class="error pageLevel" aria-hidden="true" role="alert">
+                        <p></p>
+                      </div>
+                      <div class="entry">
+                        <div class="entry-item">
+                          <label for="email">
+                            Email Address
+                          </label>
+                          <div class="error itemLevel" aria-hidden="true" role="alert">
+                            <p></p>
+                          </div>
+                          <input type="email" id="email" name="Email Address" title="Please enter a valid email address" pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$" autofocus="" placeholder="Email Address" aria-label="Email Address">
+                        </div>
+                          <div class="entry-item">
+                            <div class="password-label">
+                              <label for="password">Password</label>
+                                  <a id="forgotPassword" href="">Forgot your password?</a>
+                                            </div>
+                            <div class="error itemLevel" aria-hidden="true">
+                              <p role="alert"></p>
+                            </div>
+                            <input type="password" id="password" name="Password" placeholder="Password" aria-label="Password" autocomplete="current-password" aria-required="true">
+                                        </div>
+
+                        <div class="working"></div>
+
+
+
+                        <div class="buttons">
+                          <button id="next" type="submit" form="localAccountForm">Sign in</button>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+
+
           </p>
         </div>
       </div>
