@@ -11,9 +11,8 @@
       font-family: Roboto,sans-serif;
     }
     body {
-      color: #FFFFFF;
-      background: #003b5c;
-      background: linear-gradient(135deg, #13294b, #8ce2d0);
+      background: #f7f7f7;
+      background: linear-gradient(145deg, #f7f7f7 25%, #cccccc 75%);
       overflow: hidden;
     }
     .logo {
@@ -26,12 +25,13 @@
       width: 175px; 
     }
     .card-body {
-      color: #003B5C;
+      color: #CE4C1F;
       padding: 40px 30px;
       margin-top: auto;
       margin-bottom: auto;
       height: 100%;
       min-height: 525px;
+      background-color: #F7F3E4;
     }
 
     h2 {
@@ -79,11 +79,13 @@
     }
 
     button {
-      background-color: #003b5c;
+      background-color: #CE4C1F;
       color: #fff;
       width: 100%;
+
       text-align: center;
       margin-top: 20px;
+      color: #fff;
       padding: 10px 20px;
       border: none;
       cursor: pointer;
@@ -93,20 +95,20 @@
     button.hover,
     button:focus,
     button.focus {
-      background-color: #005c8f !important;
-      border-color: #005c8f !important;
+      background-color: #A8321A !important;
+      border-color: #A8321A !important;
       color: #FFFFFF !important;
-      box-shadow: 0 0 14px 0 #005c8f !important;
+      box-shadow: 0 0 14px 0 #A8321A !important;
     }
 
     input {
       margin-bottom: 10px;
-      border-color: #003b5c !important;
+      border-color: #CE4C1F !important;
     }
 
     input:focus{
-      box-shadow: #003b5c 0px 0px 0px 0.1rem !important;
-      border-color: #003b5c !important;
+      box-shadow: #CE4C1F 0px 0px 0px 0.1rem !important;
+      border-color: #CE4C1F !important;
       color: var(--bs-body-color);
       background-color: var(--bs-body-bg);
       outline: 0;
@@ -123,7 +125,7 @@
       text-transform: uppercase;
       font-size: 14px;
       background-color: transparent;
-      color: #003b5c;
+      color: #CE4C1F;
       font-weight: 500;
     }
     .intro {
@@ -161,21 +163,68 @@
 
 <body>
   <div class="container text-center" role="presentation">
-    <div class="bg" style="background-image: url('https://ps231402.github.io/sso_templates/images/intrado-firefly-white-clipped-desktop2.svg');"></div>
-    <div class="bgLogo" style="background-image: url('https://ps231402.github.io/sso_templates/images/logo-intrado-white-solid.png');"></div>
     <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
       <div class="card text-center" style="width: 38rem;">
         <div class="card-body">
           <div class="card-title text-start">
             <div class="d-inline-flex">
-              <img class="logo-intrado" data-tenant-branding-logo="true" src="https://ps231402.github.io/sso_templates/images/Intrado-Color-Logo.svg" alt="Intrado">
+              <img class="logo-intrado" data-tenant-branding-logo="true" src="https://ps231402.github.io/sso_templates/images/customer_xyz/customer_xyz.png" alt="Intrado">
               <h4 style="margin-top: 20px;">
                 Emergency Routing Service
               </h4>
             </div>
           </h4>
+          
           <p class="card-text" style="margin-bottom: 0px;">
-            <div id="api" role="main"></div>
+            <div id="api2" role="main"></div>
+              
+
+
+            <div id="api" data-name="Unified" role="main">
+                  <div class="heading">
+                    <h1 role="heading">Sign in</h1>
+                  </div>
+                  <form id="localAccountForm" class="localAccount" aria-label="Sign in with your email address">
+                    <div class="intro">
+                      <h2>
+                        Sign in with your email address
+                      </h2>
+                    </div>
+                    <div class="error pageLevel" aria-hidden="true" role="alert">
+                      <p></p>
+                    </div>
+                    <div class="entry">
+                      <div class="entry-item">
+                        <label for="email">
+                          Email Address
+                        </label>
+                        <div class="error itemLevel" aria-hidden="true" role="alert">
+                          <p></p>
+                        </div>
+                        <input type="email" id="email" name="Email Address" title="Please enter a valid email address" pattern="^[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'+^_`{}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$" autofocus="" placeholder="Email Address" aria-label="Email Address">
+                      </div>
+                        <div class="entry-item">
+                          <div class="password-label">
+                            <label for="password">Password</label>
+                                <a id="forgotPassword" href="">Forgot your password?</a>
+                                          </div>
+                          <div class="error itemLevel" aria-hidden="true">
+                            <p role="alert"></p>
+                          </div>
+                          <input type="password" id="password" name="Password" placeholder="Password" aria-label="Password" autocomplete="current-password" aria-required="true">
+                                      </div>
+
+                      <div class="working"></div>
+
+
+
+                      <div class="buttons">
+                        <button id="next" type="submit" form="localAccountForm">Sign in</button>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+
           </p>
         </div>
       </div>
